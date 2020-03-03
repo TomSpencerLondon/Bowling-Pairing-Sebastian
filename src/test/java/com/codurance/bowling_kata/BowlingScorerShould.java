@@ -44,4 +44,20 @@ public class BowlingScorerShould {
     int roll = bowlingScorer.roll(score);
     Assert.assertEquals(2, roll);
   }
+
+  @Test
+  public void return_two_from_two() {
+    BowlingScorer bowlingScorer = new BowlingScorer();
+    String score = "--|--|2-|--|--|--|--|--|--|--||";
+    int roll = bowlingScorer.roll(score);
+    Assert.assertEquals(2, roll);
+  }
+
+  @Test
+  public void return_three_from_three() {
+    BowlingScorer bowlingScorer = new BowlingScorer();
+    String score = "--|--|3-|--|--|--|--|--|--|--||";
+    int roll = bowlingScorer.roll(score);
+    Assert.assertEquals(3, roll);
+  }
 }
