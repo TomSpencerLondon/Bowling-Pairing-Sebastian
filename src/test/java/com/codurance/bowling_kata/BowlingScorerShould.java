@@ -25,6 +25,7 @@ public class BowlingScorerShould {
     BowlingScorer bowlingScorer = new BowlingScorer();
     String score = "--|1-|--|--|--|--|--|--|--|--||";
     int roll = bowlingScorer.roll(score);
+
     Assert.assertEquals(1, roll);
   }
 
