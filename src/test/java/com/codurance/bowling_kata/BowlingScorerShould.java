@@ -36,4 +36,12 @@ public class BowlingScorerShould {
     int roll = bowlingScorer.roll(score);
     Assert.assertEquals(1, roll);
   }
+
+  @Test
+  public void return_two_from_two_ones() {
+    BowlingScorer bowlingScorer = new BowlingScorer();
+    String score = "--|--|1-|1-|--|--|--|--|--|--||";
+    int roll = bowlingScorer.roll(score);
+    Assert.assertEquals(2, roll);
+  }
 }
